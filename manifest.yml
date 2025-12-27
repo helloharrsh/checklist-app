@@ -1,0 +1,21 @@
+modules:
+  jira:issuePanel:
+    - key: checklist-app-hello-world-issue-panel
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: checklist-app
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/9947e3a2-f767-4b7d-b3b4-bbb2e0d5e69e
